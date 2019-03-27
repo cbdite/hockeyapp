@@ -50,7 +50,7 @@ module HockeyApp
 
     def get_statistics app
       statistics_hash = ws.get_statistics app.public_identifier
-      statistics_hash["app_versions"].map{|statistics_hash|Statistic.from_hash(version_hash, app, self)}
+      statistics_hash["app_versions"].map{|statistics_hash|Statistic.from_hash(statistics_hash, app, self)}
     end
 
     def post_new_version version
