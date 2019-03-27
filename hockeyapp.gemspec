@@ -2,8 +2,8 @@
 $:.push File.expand_path("../lib", __FILE__)
 
 Gem::Specification.new do |s|
-  s.name        = "hockeyapp"
-  s.version     = "0.0.17"
+  s.name        = "cluno_hockeyapp"
+  s.version     = "0.0.21"
   s.authors     = ["Philippe Van Eerdenbrugghe", "Paul Renson"]
   s.email       = ["philippe.vaneerdenbrugghe@tapptic.com", "paul.renson.ext@tapptic.com"]
   s.homepage    = ""

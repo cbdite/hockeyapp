@@ -62,6 +62,9 @@ module HockeyApp
       @crash_groups ||= client.get_crash_groups_for_version(self, options)
     end
 
+    def statistics
+      @statistics ||= @app.statistics.select{|statistic| "#{statistic.id}" == @id.to_s}
+    end
 
     def direct_download_url
       url_strategy.direct_download_url

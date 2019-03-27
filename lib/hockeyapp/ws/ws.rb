@@ -57,6 +57,10 @@ module HockeyApp
       self.class.get "/apps/#{app_id}/app_versions", options
     end
 
+    def get_statistics app_id, options = {}
+      self.class.get "/apps/#{app_id}/statistics", options
+    end
+
     def post_new_version(
         app_id,
             ipa,

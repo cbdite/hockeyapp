@@ -70,6 +70,10 @@ module HockeyApp
       @versions ||= client.get_versions(self)
     end
 
+    def statistics
+      @statistics ||= client.get_statistics(self)
+    end
+
     def last_version
       sorted_version = versions.sort_by { |v| v.version.to_i}
       sorted_version.last
@@ -100,6 +104,7 @@ module HockeyApp
       version.tags = tags
       client.post_new_version version
       @versions = nil
+      @statistics = nil
     end
 
     def remove
